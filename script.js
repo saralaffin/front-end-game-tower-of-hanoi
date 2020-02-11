@@ -22,8 +22,8 @@ function changeColor(eve) {
     activePiece = eve.target
 }
 
-//add a move piece here function to each button
-let moveButtons = document.querySelectorAll("button")
+//add a move piece here function to each moveHere button
+let moveButtons = document.querySelectorAll(".moveHere")
 moveButtons.forEach(button => button.addEventListener("click", movePiece))
 
 function movePiece(eve) {
@@ -57,6 +57,12 @@ function movePiece(eve) {
 function checkForWin() {
     let numberInLast = pegs[2].querySelectorAll(".piece").length
     if (numberInLast == pieceCount) {
-        console.log("You've won!")
+        hideWinDiv()
     }
+}
+
+document.querySelector(".playAgain").addEventListener("click",hideWinDiv)
+
+function hideWinDiv() {
+    document.querySelector(".winner").classList.toggle("hidden")
 }

@@ -11,6 +11,19 @@ body {
     justify-content: center;
     align-items: center;
 }
+.winner {
+    position: absolute;
+    height: 20vw;
+    width: 60vw;
+    background-color: rgba(20, 20, 20, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hidden {
+    display: none;
+}
 .pegs {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

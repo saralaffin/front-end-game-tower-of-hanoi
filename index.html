@@ -7,19 +7,26 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <div class="winner hidden">
+            <h1>You've Won!</h1>
+            <h3 class="winScore">Your Score: 10</h3>
+            <h3 class="bestScore">Best Score: 10</h3>
+            <button class="playAgain">Play Again!</button>
+        </div>
         <h1>Tower of Hanoi</h1>
         <div class="pegs">
             <div class="peg firstPeg">
-                <button>Move Here</button>
+                <button class="moveHere">Move Here</button>
             </div>
             <div class="peg">
 
-                <button>Move Here</button>
+                <button class="moveHere">Move Here</button>
             </div>
             <div class="peg lastPeg">
-                <button>Move Here</button>
+                <button class="moveHere">Move Here</button>
             </div>
         </div>
+        <h3 class="moves"></h3>
         <script src="script.js"></script>
     </body>
 </html>
