@@ -57,12 +57,14 @@ function movePiece(eve) {
 function checkForWin() {
     let numberInLast = pegs[2].querySelectorAll(".piece").length
     if (numberInLast == pieceCount) {
-        hideWinDiv()
+        toggleWinDiv()
+        moveButtons.forEach(button => button.removeEventListener("click", movePiece))
+        pieces.forEach(piece => piece.removeEventListener("click", changeColor))
     }
 }
 
-document.querySelector(".playAgain").addEventListener("click",hideWinDiv)
+document.querySelector(".playAgain").addEventListener("click",toggleWinDiv)
 
-function hideWinDiv() {
+function toggleWinDiv() {
     document.querySelector(".winner").classList.toggle("hidden")
 }
