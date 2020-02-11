@@ -1,7 +1,9 @@
 * {
     box-sizing: border-box;
-    border: sienna solid 0.5vw;
-    margin: 0.5vw
+    border: white solid 0.2vw;
+    margin: 0.5vw;
+    background: black;
+    color: white;
 }
 body {
     display: flex;

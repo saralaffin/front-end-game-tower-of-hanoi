@@ -1,23 +1,25 @@
-let firstPeg = document.querySelector(".firstPeg")
+let pegs = document.querySelectorAll(".peg")
 for (let i = 9; i > 4; i-=2) {
     let piece = document.createElement("div")
     piece.setAttribute("class","piece")
     piece.setAttribute("data-size",i)
     piece.style.width = i + "vw"
-    firstPeg.insertBefore(piece, firstPeg.childNodes[0])
+    pegs[0].insertBefore(piece, pegs[0].childNodes[0])
 }
 
+//add event listener to first child of first peg
+let firstPiece = pegs[0].querySelector(".piece")
+firstPiece.addEventListener("click", changeColor)
 
 let pieces = document.querySelectorAll(".piece")
-pieces.forEach(piece => piece.addEventListener("click", changeColor))
-let activePiece = null
-
+let activePiece
 function changeColor(eve) {
-    pieces.forEach(piece => piece.style.backgroundColor = "white")
+    pieces.forEach(piece => piece.style.backgroundColor = "black")
     eve.target.style.backgroundColor = "darkgreen"
     activePiece = eve.target
 }
 
+//add a move piece here function to each button
 let moveButtons = document.querySelectorAll("button")
 moveButtons.forEach(button => button.addEventListener("click", movePiece))
 
@@ -38,6 +40,9 @@ function movePiece(eve) {
         eve.path[1].insertBefore(activePiece, eve.path[1].childNodes[0])
     }
 
+    //remove all event listeners and then add event listener to first piece in each peg
+    pieces.forEach(piece => piece.removeEventListener("click", changeColor))
+    pegs.forEach(peg => peg.childNodes[0].addEventListener("click", changeColor))
     //check for a winning condition
     checkForWin()
 }
