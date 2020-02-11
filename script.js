@@ -1,19 +1,23 @@
-let disks = document.querySelectorAll(".disk")
-disks.forEach(disk => disk.addEventListener("click", changeColor))
-let activeDisk = null
+let pieces = document.querySelectorAll(".piece")
+pieces.forEach(piece => piece.addEventListener("click", changeColor))
+let activePiece = null
+
 function changeColor(eve) {
     eve.target.style.backgroundColor = "darkgreen"
-    activeDisk = eve.target
+    activePiece = eve.target
+    console.log("The size of this piece is: ",parseInt(activePiece.dataset.size))
 }
 
 let moveButtons = document.querySelectorAll("button")
-moveButtons.forEach(button => button.addEventListener("click", moveDisk))
+moveButtons.forEach(button => button.addEventListener("click", movePiece))
 
-function moveDisk(eve) {
-    let disksPresent = eve.path[1].querySelectorAll(".disk")
-    console.log("how many disks already here: ",disksPresent.length)
-    if (disksPresent.length == 0) {
-        eve.target.parentNode.appendChild(activeDisk)
-    }
-    disksPresent.forEach(disk => console.log("the size of box already here is: ",parseInt(disk.dataset.size)))
+function movePiece(eve) {
+    let piecesPresent = eve.path[1].querySelectorAll(".piece")
+    console.log("how many pieces already here: ",piecesPresent.length)
+    eve.path[1].insertBefore(activePiece, eve.path[1].childNodes[0])
+    let pieceSizes = []
+    piecesPresent.forEach(piece => {
+        pieceSizes.push(parseInt(piece.dataset.size))
+    })
+    console.log("the size of pieces already here is: ",pieceSizes)
 }
