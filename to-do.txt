@@ -1,0 +1,5 @@
+-Make pretty
+-Add levels
+-Click and drag pieces
+-Instead of "move here" button, allow user to click into peg div
+-Graphic of a peg/make it look more like the wooden version
