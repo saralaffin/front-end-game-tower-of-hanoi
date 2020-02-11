@@ -10,5 +10,6 @@ let moveButtons = document.querySelectorAll("button")
 moveButtons.forEach(button => button.addEventListener("click", moveDisk))
 
 function moveDisk(eve) {
+    console.log("how many disks already here: ",eve.path[1].querySelectorAll(".disk").length)
     eve.target.parentNode.appendChild(activeDisk)
 }
