@@ -1,14 +1,23 @@
 let level = 1
 let pieceCount = 2 + level
 let pegs = document.querySelectorAll(".peg")
-for (let i = (7+level*2); i > 4; i-=2) {
-    let piece = document.createElement("div")
-    piece.setAttribute("class","piece")
-    piece.setAttribute("data-size",i)
-    piece.style.width = i + "vw"
-    pegs[0].insertBefore(piece, pegs[0].childNodes[0])
-}
 
+function addPieces() {
+    //clear pegs
+    pegs.forEach(peg => {
+        peg.querySelectorAll(".piece").forEach(piece => {
+            piece.remove()
+        })
+    })
+    for (let i = (7+level*2); i > 4; i-=2) {
+        let piece = document.createElement("div")
+        piece.setAttribute("class","piece")
+        piece.setAttribute("data-size",i)
+        piece.style.width = i + "vw"
+        pegs[0].insertBefore(piece, pegs[0].childNodes[0])
+    }
+}
+addPieces()
 //add event listener to first child of first peg
 let firstPiece = pegs[0].querySelector(".piece")
 firstPiece.addEventListener("click", changeColor)
@@ -79,8 +88,13 @@ function checkForWin() {
     }
 }
 
-document.querySelector(".playAgain").addEventListener("click",toggleWinDiv)
+document.querySelector(".playAgain").addEventListener("click",resetBoard)
 
 function toggleWinDiv() {
     document.querySelector(".winner").classList.toggle("hidden")
+}
+
+function resetBoard() {
+    toggleWinDiv()
+    addPieces()
 }
