@@ -1,8 +1,11 @@
 let level = 1
 let pieceCount = 2 + level
 let pegs = document.querySelectorAll(".peg")
+let moves
 
-function addPieces() {
+function setPieces() {
+    moves = 0
+    document.querySelector(".moves").innerHTML = `Moves made: ${moves}`
     //clear pegs
     pegs.forEach(peg => {
         peg.querySelectorAll(".piece").forEach(piece => {
@@ -16,11 +19,12 @@ function addPieces() {
         piece.style.width = i + "vw"
         pegs[0].insertBefore(piece, pegs[0].childNodes[0])
     }
+
+    //add event listener to first child of first peg
+    let firstPiece = pegs[0].querySelector(".piece")
+    firstPiece.addEventListener("click", changeColor)
 }
-addPieces()
-//add event listener to first child of first peg
-let firstPiece = pegs[0].querySelector(".piece")
-firstPiece.addEventListener("click", changeColor)
+setPieces()
 
 let pieces = document.querySelectorAll(".piece")
 let activePiece
@@ -34,7 +38,6 @@ function changeColor(eve) {
 //add a move piece here function to each moveHere button
 let moveButtons = document.querySelectorAll(".moveHere")
 moveButtons.forEach(button => button.addEventListener("click", movePiece))
-let moves = 0
 function movePiece(eve) {
     let piecesPresent = eve.path[1].querySelectorAll(".piece")
     //add all piece sizes to one array
@@ -88,13 +91,15 @@ function checkForWin() {
     }
 }
 
-document.querySelector(".playAgain").addEventListener("click",resetBoard)
+document.querySelector(".playAgain").addEventListener("click",resetWinBoard)
 
 function toggleWinDiv() {
     document.querySelector(".winner").classList.toggle("hidden")
 }
 
-function resetBoard() {
+function resetWinBoard() {
     toggleWinDiv()
-    addPieces()
+    setPieces()
 }
+
+document.querySelector(".reset").addEventListener("click",setPieces)
