@@ -3,6 +3,7 @@ pieces.forEach(piece => piece.addEventListener("click", changeColor))
 let activePiece = null
 
 function changeColor(eve) {
+    pieces.forEach(piece => piece.style.backgroundColor = "white")
     eve.target.style.backgroundColor = "darkgreen"
     activePiece = eve.target
 }
