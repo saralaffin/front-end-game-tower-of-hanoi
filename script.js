@@ -1,5 +1,7 @@
+let level = 1
+let pieceCount = 2 + level
 let pegs = document.querySelectorAll(".peg")
-for (let i = 9; i > 4; i-=2) {
+for (let i = (7+level*2); i > 4; i-=2) {
     let piece = document.createElement("div")
     piece.setAttribute("class","piece")
     piece.setAttribute("data-size",i)
@@ -13,6 +15,7 @@ firstPiece.addEventListener("click", changeColor)
 
 let pieces = document.querySelectorAll(".piece")
 let activePiece
+// function to change active color 
 function changeColor(eve) {
     pieces.forEach(piece => piece.style.backgroundColor = "black")
     eve.target.style.backgroundColor = "darkgreen"
@@ -52,9 +55,8 @@ function movePiece(eve) {
 }
 
 function checkForWin() {
-    let lastPeg = document.querySelector(".lastPeg")
-    let numberInLast = lastPeg.querySelectorAll(".piece").length
-    if (numberInLast == 3) {
+    let numberInLast = pegs[2].querySelectorAll(".piece").length
+    if (numberInLast == pieceCount) {
         console.log("You've won!")
     }
 }
