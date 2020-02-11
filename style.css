@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    border: sienna solid 0.5vw;
+    margin: 0.5vw
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pegs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80vw;
+}
+.peg {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.box-1 {
+    width: 5vw;
+    height: 5vw;
+}
+.box-2 {
+    width: 7vw;
+    height: 5vw;
+}
+.box-3 {
+    width: 9vw;
+    height: 5vw;
+}
