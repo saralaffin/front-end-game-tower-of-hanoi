@@ -42,7 +42,11 @@ function movePiece(eve) {
 
     //remove all event listeners and then add event listener to first piece in each peg
     pieces.forEach(piece => piece.removeEventListener("click", changeColor))
-    pegs.forEach(peg => peg.childNodes[0].addEventListener("click", changeColor))
+    pegs.forEach(peg => {
+        if (peg.querySelector(".piece")) {
+            peg.querySelector(".piece").addEventListener("click", changeColor)
+        }
+    })
     //check for a winning condition
     checkForWin()
 }
