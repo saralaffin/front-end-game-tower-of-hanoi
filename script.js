@@ -65,7 +65,10 @@ function checkForWin() {
         toggleWinDiv()
 
         //add moves to win screen
-        document.querySelector(".winScore").innerHTML = `Your Score: ${moves}`
+        document.querySelector(".winScore").innerHTML = `Your Moves: ${moves}`
+
+        //add fewest moves possible to win screen
+        document.querySelector(".bestScore").innerHTML = `Lowest Possible Moves: ${2**pieceCount -1}`
 
         //remove event listeners
         moveButtons.forEach(button => button.removeEventListener("click", movePiece))
