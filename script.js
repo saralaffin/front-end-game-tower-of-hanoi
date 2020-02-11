@@ -10,6 +10,8 @@ let moveButtons = document.querySelectorAll("button")
 moveButtons.forEach(button => button.addEventListener("click", moveDisk))
 
 function moveDisk(eve) {
-    console.log("how many disks already here: ",eve.path[1].querySelectorAll(".disk").length)
+    let disksPresent = eve.path[1].querySelectorAll(".disk")
+    console.log("how many disks already here: ",disksPresent.length)
+    disksPresent.forEach(disk => console.log("the size of box already here is: ",parseInt(disk.dataset.size)))
     eve.target.parentNode.appendChild(activeDisk)
 }
