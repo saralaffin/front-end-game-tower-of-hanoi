@@ -64,6 +64,9 @@ function checkForWin() {
         //show You've Won!
         toggleWinDiv()
 
+        //add moves to win screen
+        document.querySelector(".winScore").innerHTML = `Your Score: ${moves}`
+
         //remove event listeners
         moveButtons.forEach(button => button.removeEventListener("click", movePiece))
         pieces.forEach(piece => piece.removeEventListener("click", changeColor))
