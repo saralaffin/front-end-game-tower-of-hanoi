@@ -1,9 +1,15 @@
 * {
     box-sizing: border-box;
+    background: #2D0922;
+    color: #729FCF;
+}
+.peg, .piece {
     border: white solid 0.2vw;
     margin: 0.5vw;
-    background: black;
-    color: white;
+}
+button {
+    margin: 0.5vw;
+    border-radius: 5vw;
 }
 body {
     display: flex;
@@ -37,5 +43,5 @@ body {
     height: 30vw;
 }
 .piece {
-    height: 5vw;
+    height: 2vw;
 }

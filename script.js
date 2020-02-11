@@ -30,8 +30,8 @@ let pieces = document.querySelectorAll(".piece")
 let activePiece
 // function to change active color 
 function changeColor(eve) {
-    pieces.forEach(piece => piece.style.backgroundColor = "black")
-    eve.target.style.backgroundColor = "darkgreen"
+    pieces.forEach(piece => piece.style.backgroundColor = "#2D0922")
+    eve.target.style.backgroundColor = "#8AE234"
     activePiece = eve.target
 }
 
@@ -87,7 +87,7 @@ function checkForWin() {
         pieces.forEach(piece => piece.removeEventListener("click", changeColor))
 
         //remove green from active box
-        pieces.forEach(piece => piece.style.backgroundColor = "black")
+        pieces.forEach(piece => piece.style.backgroundColor = "#2D0922")
     }
 }
 
