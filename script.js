@@ -57,9 +57,15 @@ function movePiece(eve) {
 function checkForWin() {
     let numberInLast = pegs[2].querySelectorAll(".piece").length
     if (numberInLast == pieceCount) {
+        //show You've Won!
         toggleWinDiv()
+
+        //remove event listeners
         moveButtons.forEach(button => button.removeEventListener("click", movePiece))
         pieces.forEach(piece => piece.removeEventListener("click", changeColor))
+        
+        //remove green from active box
+        pieces.forEach(piece => piece.style.backgroundColor = "black")
     }
 }
 
