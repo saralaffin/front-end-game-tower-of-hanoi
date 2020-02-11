@@ -25,7 +25,7 @@ function changeColor(eve) {
 //add a move piece here function to each moveHere button
 let moveButtons = document.querySelectorAll(".moveHere")
 moveButtons.forEach(button => button.addEventListener("click", movePiece))
-
+let moves = 0
 function movePiece(eve) {
     let piecesPresent = eve.path[1].querySelectorAll(".piece")
     //add all piece sizes to one array
@@ -39,8 +39,12 @@ function movePiece(eve) {
 
     if (piecesPresent.length == 0) { //if peg is empty, allow new piece to enter
         eve.path[1].insertBefore(activePiece, eve.path[1].childNodes[0])
+        moves++
+        document.querySelector(".moves").innerHTML = `Moves made: ${moves}`
     } else if (parseInt(activePiece.dataset.size) < pieceSizes[0]) { //add piece if smaller than the smallest piece
         eve.path[1].insertBefore(activePiece, eve.path[1].childNodes[0])
+        moves++
+        document.querySelector(".moves").innerHTML = `Moves made: ${moves}`
     }
 
     //remove all event listeners and then add event listener to first piece in each peg
@@ -63,7 +67,7 @@ function checkForWin() {
         //remove event listeners
         moveButtons.forEach(button => button.removeEventListener("click", movePiece))
         pieces.forEach(piece => piece.removeEventListener("click", changeColor))
-        
+
         //remove green from active box
         pieces.forEach(piece => piece.style.backgroundColor = "black")
     }
