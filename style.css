@@ -21,15 +21,6 @@ body {
     align-items: center;
     height: 30vw;
 }
-.box-1 {
-    width: 5vw;
-    height: 5vw;
-}
-.box-2 {
-    width: 7vw;
-    height: 5vw;
-}
-.box-3 {
-    width: 9vw;
+.piece {
     height: 5vw;
 }

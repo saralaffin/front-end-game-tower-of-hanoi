@@ -1,3 +1,13 @@
+let firstPeg = document.querySelector(".firstPeg")
+for (let i = 9; i > 4; i-=2) {
+    let piece = document.createElement("div")
+    piece.setAttribute("class","piece")
+    piece.setAttribute("data-size",i)
+    piece.style.width = i + "vw"
+    firstPeg.insertBefore(piece, firstPeg.childNodes[0])
+}
+
+
 let pieces = document.querySelectorAll(".piece")
 pieces.forEach(piece => piece.addEventListener("click", changeColor))
 let activePiece = null
