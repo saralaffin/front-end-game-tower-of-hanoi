@@ -1,5 +1,35 @@
+-Go through mini-lesson on documentation
 -Make pretty
 -Add levels
 -Click and drag pieces
 -Instead of "move here" button, allow user to click into peg div
 -Graphic of a peg/make it look more like the wooden version
+-Make responsive
+-How to play section/button. Maybe gif showing how to play?
+
+
+Code Quality: Is the code well formatted? Are variable and function names semantic and sensible? Is the code easy to read and understand?
+
+Technical Requirements: How does the project stack up to the requirements for this project? Is the developer making use of the material we've covered in a way that makes sense?
+
+Creativity & Interface: Is the application easy to navigate? Does it work well in every major browser? Is it responsive? Does it incorporate modern UI Themes?
+
+Functionality: Does the application work without errors or bugs? Does it present a complete app, where every feature is fully implemented in a way that makes sense?
+
+Presentation: Is there adequate documentation? Is the repository well organized and free of clutter?
+
+Use semantic markup for HTML and CSS (adhere to best practices)
+
+Additionally, your project should stick with KISS (Keep It Stupid Simple) and DRY (Don't Repeat Yourself) principles.
+
+Your HTML/CSS should pass the HTML5 Validator and CSS Validator
+A link to your hosted project in the URL section of your Github repo
+A readme.md file, including
+    Explanations of the technologies used, the approach taken, installation instructions, unsolved problems, etc.
+    Follow this mini-lesson on writing documentation for your project
+    
+    Maybe also include: What would you do differently?
+        What are you most proud of?
+        What would you do next?
+        How did you plan your project?
+        What did you learn?
