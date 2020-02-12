@@ -106,4 +106,10 @@ function game(level) {
 
     document.querySelector(".reset").addEventListener("click",setPieces)
 }
-game(2)
+
+document.querySelector(".level-1").addEventListener("click",createGame)
+
+function createGame(eve){
+    let level = parseInt(eve.target.innerHTML.split(" ")[1])
+    game(level)
+}

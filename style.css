@@ -17,6 +17,14 @@ body {
     justify-content: center;
     align-items: center;
 }
+nav {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2vw;
+    border-bottom: 0.5vw solid white;
+}
 .winner {
     position: absolute;
     min-height: 20vw;
