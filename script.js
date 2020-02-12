@@ -2,27 +2,32 @@ let level = 1
 let pieceCount = 2 + level
 let pegs = document.querySelectorAll(".peg")
 let moves
+let moveButtons
 
 function setPieces() {
     moves = 0
     document.querySelector(".moves").innerHTML = `Moves made: ${moves}`
     //clear pegs
     pegs.forEach(peg => {
-        peg.querySelectorAll(".piece").forEach(piece => {
-            piece.remove()
+        peg.querySelectorAll(".piece").forEach(node => {
+            node.remove()
         })
     })
     for (let i = (7+level*2); i > 4; i-=2) {
-        let piece = document.createElement("div")
-        piece.setAttribute("class","piece")
-        piece.setAttribute("data-size",i)
-        piece.style.width = i + "vw"
-        pegs[0].insertBefore(piece, pegs[0].childNodes[0])
+        let pieceDiv = document.createElement("div")
+        pieceDiv.setAttribute("class","piece")
+        pieceDiv.setAttribute("data-size",i)
+        pieceDiv.style.width = i + "vw"
+        pegs[0].insertBefore(pieceDiv, pegs[0].childNodes[0])
     }
 
     //add event listener to first child of first peg
     let firstPiece = pegs[0].querySelector(".piece")
     firstPiece.addEventListener("click", changeColor)
+
+    //add a move piece function to each moveHere button
+    moveButtons = document.querySelectorAll(".moveHere")
+    moveButtons.forEach(button => button.addEventListener("click", movePiece))
 }
 setPieces()
 
@@ -35,9 +40,6 @@ function changeColor(eve) {
     activePiece = eve.target
 }
 
-//add a move piece here function to each moveHere button
-let moveButtons = document.querySelectorAll(".moveHere")
-moveButtons.forEach(button => button.addEventListener("click", movePiece))
 function movePiece(eve) {
     let piecesPresent = eve.path[1].querySelectorAll(".piece")
     //add all piece sizes to one array
