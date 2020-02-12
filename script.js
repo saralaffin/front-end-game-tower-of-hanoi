@@ -52,6 +52,7 @@ function game(level) {
         pieceSizes.sort(function(a, b){return a - b})
 
         if (piecesPresent.length == 0) { //if peg is empty, allow new piece to enter
+            console.log(eve.path[1])
             eve.path[1].insertBefore(activePiece, eve.path[1].childNodes[0])
             moves++
             document.querySelector(".moves").innerHTML = `Moves made: ${moves}`
@@ -106,10 +107,11 @@ function game(level) {
 
     document.querySelector(".reset").addEventListener("click",setPieces)
 }
-
-document.querySelector(".level-1").addEventListener("click",createGame)
-
-function createGame(eve){
-    let level = parseInt(eve.target.innerHTML.split(" ")[1])
+game(3)
+let num = 1
+// [1,2,3,4].forEach(num => document.querySelector(`.level-${num}`).addEventListener("click",createGame))
+document.querySelector(`.level-${num}`).addEventListener("click",createGame)
+function createGame(e){
+    let level = parseInt(e.target.innerHTML.split(" ")[1])
     game(level)
 }
