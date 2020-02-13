@@ -56,6 +56,7 @@ nav {
 }
 .winner {
     position: absolute;
+    top: 25%;
     min-height: 20vw;
     width: 60vw;
     background-color: rgba(20, 20, 20, 0.9);
