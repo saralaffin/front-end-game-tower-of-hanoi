@@ -119,3 +119,5 @@ function getLevel(e){
 
 setLevel(1)
 setPieces()
+
+introJs().start()
