@@ -16,11 +16,11 @@ function setPieces() {
             node.remove()
         })
     })
-    for (let i = (7+level*2); i > 4; i-=2) {
+    for (let i = (5+level*2); i > 1; i-=2) {
         let pieceDiv = document.createElement("div")
         pieceDiv.setAttribute("class","piece")
         pieceDiv.setAttribute("data-size",i)
-        pieceDiv.style.width = i + "vw"
+        pieceDiv.style.width = i + "em"
         pegs[0].insertBefore(pieceDiv, pegs[0].childNodes[0])
     }
     pieces = document.querySelectorAll(".piece")

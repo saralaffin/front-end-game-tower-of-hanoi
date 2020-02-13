@@ -1,7 +1,31 @@
 * {
     box-sizing: border-box;
-    background: #2D0922;
+    /* background: #2D0922; */
     color: #729FCF;
+}
+h1 {
+    font-size: 4em;
+    margin: 0;
+    padding-top: 2vh;
+}
+nav>div {
+    padding: 0.25em 0.25em 0 0.25em;
+    font-size: 2em;
+}
+nav>div:hover {
+    background-color: rgba(45,9,34,0.7);
+    padding-top: 0;
+    padding-bottom: 0.25em;
+}
+.peg {
+    background: rgba(45,9,34,0.7);
+    max-width: 275px;
+    width: 25vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 }
 .peg, .piece {
     border: white solid 0.2vw;
@@ -10,15 +34,20 @@
 button {
     margin: 0.5vw;
     border-radius: 5vw;
+    font-size: 1em;
 }
 body {
+    background-image: url("claudio-testa-fb_CZ4hZXWo-unsplash.jpg");
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 nav {
-    width: 100vw;
+    width: 90vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -42,14 +71,7 @@ nav {
 .pegs {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 80vw;
-}
-.peg {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    height: 30vw;
+    /* grid-gap: ; */
 }
 .piece {
     height: 2vw;
@@ -57,4 +79,29 @@ nav {
 }
 .active {
     background-color: #8AE234;
+}
+.background-credit {
+    padding-top: 2em;
+}
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    nav>div {
+        font-size: 1em;
+    }
+    .pegs {
+        display: flex;
+        flex-direction: column;
+    }
+    .peg {
+        width: 80vw;
+        height: 25vh;
+    }
+    .piece {
+        height: 2.5vh;
+    }
+    body {
+        margin: 0;
+    }
 }
