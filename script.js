@@ -106,8 +106,11 @@ document.querySelector(".reset").addEventListener("click",setPieces)
 
 function setLevel(n) {
     level = n
-    levels.forEach(num => document.querySelector(`.level-${num}`).classList.remove("level-hover"))
-    document.querySelector(`.level-${n}`).classList.add("level-hover")
+    // levels.forEach(num => document.querySelector(`.level-${num}`).classList.remove("active-tab"))
+    if (document.querySelector(".active-tab")) {
+        document.querySelector(".active-tab").classList.remove("active-tab")
+    }
+    document.querySelector(`.level-${n}`).classList.add("active-tab")
 }
 
 let levels = [1,2,3,4]
@@ -122,4 +125,11 @@ function getLevel(e){
 setLevel(1)
 setPieces()
 
-introJs().start()
+//start introJS when how to play tab is clicked
+document.querySelector(".how-to-play").addEventListener("click",startIntro)
+
+function startIntro(){
+    document.querySelector(".active-tab").classList.remove("active-tab")
+    document.querySelector(".how-to-play").classList.add("active-tab")
+    introJs().start()
+}

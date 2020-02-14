@@ -18,7 +18,7 @@ nav>div:hover {
     padding-top: 0;
     padding-bottom: 0.25em;
 }
-.level-hover {
+.active-tab {
     background-color: rgba(45,9,34,0.7);
     padding-top: 0;
     padding-bottom: 0.25em;
