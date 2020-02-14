@@ -1,8 +1,26 @@
 # front-end-game-tower-of-hanoi
 
-Project 4 in General Assembly SEI35
+Project 4 in General Assembly SEI35. Given (most of) 4 days in class to work on it. 
 
 To see the app, click [here](https://saralaffin.github.io/front-end-game-tower-of-hanoi/)
+
+## Technologies Used
+
+HTML, CSS, and Javascript
+
+## Approach Taken
+
+Started small! Had a working to-do list written out IRL, and then typed out in my repo. Asked questions and sought out advice along the way.
+
+### Would have done differently/challenges
+* Incorporate objects early. Tried (and failed) to incorparate a game object after site was up and running.
+* Level tabs were hard to do/buggy when first starting. Good learning experience for scopes
+
+### Unsolved Problems
+* Clean up how-to instructions
+* Clean up Javascript
+* Improve UX/DI
+* Use OOP
 
 ## Authors
 
