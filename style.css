@@ -64,7 +64,7 @@ nav>div:hover, .active-tab {
     align-items: center;
 }
 .peg, .piece {
-    border: white solid 0.2vw;
+    border: white solid 5px;
     margin: 0.5vw;
 }
 .piece {
@@ -132,6 +132,7 @@ animation-delay: 3s;
     }
     nav>div {
         font-size: 1em;
+        text-align: center;
     }
     .pegs {
         display: flex;
@@ -143,5 +144,8 @@ animation-delay: 3s;
     }
     .piece {
         height: 2.5vh;
+    }
+    .peg, .piece {
+        border: white solid 2px;
     }
 }
