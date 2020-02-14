@@ -90,6 +90,39 @@ nav {
 .background-credit {
     padding-top: 2em;
 }
+
+.animated.delay-1 {
+-webkit-animation-delay: 0.5s;
+animation-delay: 0.5s;
+}
+
+.animated.delay-2 {
+-webkit-animation-delay: 1s;
+animation-delay: 1s;
+}
+
+.animated.delay-3 {
+-webkit-animation-delay: 1.5s;
+animation-delay: 1.5s;
+}
+
+.animated.delay-4 {
+-webkit-animation-delay: 2s;
+animation-delay: 2s;
+}
+
+.animated.delay-5 {
+-webkit-animation-delay: 2.5s;
+animation-delay: 2.5s;
+}
+.animated.delay-6 {
+-webkit-animation-delay: 3s;
+animation-delay: 3s;
+}
+.animated.fast {
+-webkit-animation-duration: 800ms;
+animation-duration: 800ms;
+}
 @media only screen and (max-width: 768px) {
     h1 {
         font-size: 2em;

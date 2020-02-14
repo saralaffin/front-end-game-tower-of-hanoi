@@ -16,9 +16,9 @@ function setPieces() {
             node.remove()
         })
     })
-    for (let i = (5+level*2); i > 1; i-=2) {
+    for (let i = (5+level*2), j = 1; i > 1; i-=2, j++) {
         let pieceDiv = document.createElement("div")
-        pieceDiv.setAttribute("class","piece")
+        pieceDiv.setAttribute("class",`piece animated fadeInDown delay-${j}`)
         pieceDiv.setAttribute("data-size",i)
         pieceDiv.style.width = i + "em"
         pegs[0].insertBefore(pieceDiv, pegs[0].childNodes[0])
@@ -131,6 +131,8 @@ document.querySelector(".how-to-play").addEventListener("click",startIntro)
 function startIntro(){
     level = 0
     setPieces()
+    //remove animated class from pieces to help things line up
+    
     document.querySelector(".active-tab").classList.remove("active-tab")
     document.querySelector(".how-to-play").classList.add("active-tab")
 
@@ -150,5 +152,6 @@ function startIntro(){
     document.querySelector(".one-more-for-introJS").setAttribute("data-intro","Win the game by building the tower completely in the last row!")
     document.querySelector(".one-more-for-introJS").setAttribute("data-step","5")
 
-    introJs().start()
+    introJs().setOption("highlightClass","animated infinite heartBeat").start()
+    // introJs().start()
 }
