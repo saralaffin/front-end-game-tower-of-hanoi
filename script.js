@@ -129,7 +129,26 @@ setPieces()
 document.querySelector(".how-to-play").addEventListener("click",startIntro)
 
 function startIntro(){
+    level = 0
+    setPieces()
     document.querySelector(".active-tab").classList.remove("active-tab")
     document.querySelector(".how-to-play").classList.add("active-tab")
+
+    //set starting rules
+    document.querySelector(".piece").setAttribute("data-intro","Click on the top piece! (it should turn green). Rule #1: you can only select one piece at a time, and it must be the one on top.")
+    document.querySelector(".piece").setAttribute("data-step","1")
+
+    document.querySelectorAll(".moveHere")[1].setAttribute("data-intro","Click here to move the active piece. Rule #2: every move involves taking the top piece from one of the stacks and placing it on top of another stack (or an empty one)")
+    document.querySelectorAll(".moveHere")[1].setAttribute("data-step","2")
+
+    document.querySelectorAll(".piece")[1].setAttribute("data-intro","Click on another piece!")
+    document.querySelectorAll(".piece")[1].setAttribute("data-step","3")
+
+    document.querySelector(".pegs").setAttribute("data-intro","Rule #3: No piece can be put on top of one smaller than itself. Try moving this next piece and see where you can place it.")
+    document.querySelector(".pegs").setAttribute("data-step","4")
+
+    document.querySelector(".one-more-for-introJS").setAttribute("data-intro","Win the game by building the tower completely in the last row!")
+    document.querySelector(".one-more-for-introJS").setAttribute("data-step","5")
+
     introJs().start()
 }
