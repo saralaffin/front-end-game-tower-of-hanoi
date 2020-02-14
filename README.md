@@ -18,7 +18,7 @@ Background image by [Claudio Testa](https://unsplash.com/@claudiotesta?utm_mediu
 
 Dedicated to my middle school shop teacher, Mr.Kelly. I built this game out of wood in his class.
 
-Color scheme inspured by the linux ubuntu default console.
+Color scheme inspured by the linux ubuntu terminal.
 
 ## Acknowledgments
 * Instructors and TA's at GA in DC
