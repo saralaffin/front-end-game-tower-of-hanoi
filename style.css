@@ -55,9 +55,9 @@ nav>div:hover, .active-tab {
 }
 .peg {
     background: rgba(45,9,34,0.7);
-    max-width: 275px;
+    max-width: 400px;
     width: 30vw;
-    height: 50vh;
+    height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -68,7 +68,7 @@ nav>div:hover, .active-tab {
     margin: 0.5vw;
 }
 .piece {
-    height: 2vw;
+    height: 3vh;
     background-color: #2D0922;
 }
 button {
@@ -139,7 +139,7 @@ animation-delay: 3s;
     }
     .peg {
         width: 80vw;
-        height: 25vh;
+        height: 30vh;
     }
     .piece {
         height: 2.5vh;
