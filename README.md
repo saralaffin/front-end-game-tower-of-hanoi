@@ -4,10 +4,30 @@ Project 4 in General Assembly SEI35
 
 To see the app, click [here](https://saralaffin.github.io/front-end-game-tower-of-hanoi/)
 
+##Authors
+
+Mainly written by Sara Laffin
+
 Animations by [Daniel Eden Copyright (c) 2019](https://daneden.github.io/animate.css/)
+
 How to play using [intro js](https://introjs.com/docs/)
 
-# Project #4: Build a Game with HTML, CSS and JavaScript
+Background image by [Claudio Testa](https://unsplash.com/@claudiotesta?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge)
+
+##Dedication and Inspiration
+
+Dedicated to my middle school shop teacher, Mr.Kelly. I built this game out of wood in his class.
+
+Color scheme inspured by the linux ubuntu default console.
+
+## Acknowledgments
+* Instructors and TA's at GA in DC
+* Peers at DC Code and Coffee for helping me understand transitions and animations
+* Google searches
+
+GA requiremenets presented below:
+
+## Project #4: Build a Game with HTML, CSS and JavaScript
 
 For your fourth project, you'll be creating a familiar game using HTML, CSS and
 JS! Please choose one of the following options:
