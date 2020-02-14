@@ -4,24 +4,54 @@
     font-weight: bold;
     color: #729FCF;
 }
+/* body elements in order of appearance in HTML */
+body {
+    background-image: url("claudio-testa-fb_CZ4hZXWo-unsplash.jpg");
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.winner {
+    position: absolute;
+    top: 25%;
+    min-height: 20vw;
+    width: 60vw;
+    background-color: rgba(20, 20, 20, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: white solid 0.2vw;
+}
 h1 {
     font-size: 4em;
     margin: 0;
     padding-top: 2vh;
 }
+nav {
+    width: 90vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2vw;
+    border-bottom: 0.5vw solid white;
+}
 nav>div {
     padding: 0.25em 0.25em 0 0.25em;
     font-size: 2em;
 }
-nav>div:hover {
+nav>div:hover, .active-tab {
     background-color: rgba(45,9,34,0.7);
     padding-top: 0;
     padding-bottom: 0.25em;
 }
-.active-tab {
-    background-color: rgba(45,9,34,0.7);
-    padding-top: 0;
-    padding-bottom: 0.25em;
+.pegs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 .peg {
     background: rgba(45,9,34,0.7);
@@ -37,64 +67,36 @@ nav>div:hover {
     border: white solid 0.2vw;
     margin: 0.5vw;
 }
+.piece {
+    height: 2vw;
+    background-color: #2D0922;
+}
 button {
     margin: 0.5vw;
     border-radius: 5vw;
     font-size: 1em;
     padding: 0.25em;
 }
-body {
-    background-image: url("claudio-testa-fb_CZ4hZXWo-unsplash.jpg");
-    min-height: 100vh;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+.background-credit {
+    padding-top: 2em;
 }
-nav {
-    width: 90vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 2vw;
-    border-bottom: 0.5vw solid white;
-}
-.winner {
-    position: absolute;
-    top: 25%;
-    min-height: 20vw;
-    width: 60vw;
-    background-color: rgba(20, 20, 20, 0.9);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: white solid 0.2vw;
-}
+/* toggled classes */
 .hidden {
     display: none;
-}
-.pegs {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-.piece {
-    height: 2vw;
-    background-color: #2D0922;
 }
 .active {
     background-color: #8AE234;
 }
-.background-credit {
-    padding-top: 2em;
+/* .animated.delay classes brought over from animate.css Copyright (c) 2019 Daniel Eden and edited here */
+.animated.delay-0 {
+-webkit-animation-delay: 0s;
+animation-delay: 0s;
 }
 
 .animated.delay-1 {
--webkit-animation-delay: 0.5s;
-animation-delay: 0.5s;
-}
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    }
 
 .animated.delay-2 {
 -webkit-animation-delay: 1s;
@@ -115,14 +117,16 @@ animation-delay: 2s;
 -webkit-animation-delay: 2.5s;
 animation-delay: 2.5s;
 }
+
 .animated.delay-6 {
 -webkit-animation-delay: 3s;
 animation-delay: 3s;
 }
-/* .custom-highlightClass {
 
-} */
 @media only screen and (max-width: 768px) {
+    body {
+        margin: 0;
+    }
     h1 {
         font-size: 2em;
     }
@@ -139,8 +143,5 @@ animation-delay: 3s;
     }
     .piece {
         height: 2.5vh;
-    }
-    body {
-        margin: 0;
     }
 }

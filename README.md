@@ -4,6 +4,9 @@ Project 4 in General Assembly SEI35
 
 To see the app, click [here](https://saralaffin.github.io/front-end-game-tower-of-hanoi/)
 
+Animations by [Daniel Eden Copyright (c) 2019](https://daneden.github.io/animate.css/)
+How to play using [intro js](https://introjs.com/docs/)
+
 # Project #4: Build a Game with HTML, CSS and JavaScript
 
 For your fourth project, you'll be creating a familiar game using HTML, CSS and

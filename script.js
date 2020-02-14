@@ -16,7 +16,7 @@ function setPieces() {
             node.remove()
         })
     })
-    for (let i = (5+level*2), j = 1; i > 1; i-=2, j++) {
+    for (let i = (5+level*2), j = 0; i > 1; i-=2, j++) {
         let pieceDiv = document.createElement("div")
         if (level == 0) { 
             //do not include animated class for intro to help things line up
@@ -40,6 +40,11 @@ function setPieces() {
 
     // function to change active color 
 function changeColor(eve) {
+    if (document.querySelectorAll(".fadeInDown").length != 0) {
+        document.querySelectorAll(".fadeInDown").forEach(animatedPiece => {
+            animatedPiece.classList.remove("animated")
+        })
+    }
     pieces.forEach(piece => piece.style.backgroundColor = "#2D0922")
     eve.target.style.backgroundColor = "#8AE234"
     activePiece = eve.target
@@ -111,7 +116,7 @@ document.querySelector(".reset").addEventListener("click",setPieces)
 
 function setLevel(n) {
     level = n
-    // levels.forEach(num => document.querySelector(`.level-${num}`).classList.remove("active-tab"))
+    
     if (document.querySelector(".active-tab")) {
         document.querySelector(".active-tab").classList.remove("active-tab")
     }
