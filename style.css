@@ -119,10 +119,9 @@ animation-delay: 2.5s;
 -webkit-animation-delay: 3s;
 animation-delay: 3s;
 }
-.animated.fast {
--webkit-animation-duration: 800ms;
-animation-duration: 800ms;
-}
+/* .custom-highlightClass {
+
+} */
 @media only screen and (max-width: 768px) {
     h1 {
         font-size: 2em;

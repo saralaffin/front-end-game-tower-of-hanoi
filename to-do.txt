@@ -1,9 +1,6 @@
--Go through mini-lesson on documentation
--Make pretty
 -Click and drag pieces
 -Instead of "move here" button, allow user to click into peg div
--Graphic of a peg/make it look more like the wooden versio
--How to play section/button. Maybe gif showing how to play?
+-Graphic of a peg/make it look more like the wooden version
 
 
 Code Quality: Is the code well formatted? Are variable and function names semantic and sensible? Is the code easy to read and understand?
