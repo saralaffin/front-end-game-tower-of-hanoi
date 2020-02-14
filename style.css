@@ -18,6 +18,11 @@ nav>div:hover {
     padding-top: 0;
     padding-bottom: 0.25em;
 }
+.level-hover {
+    background-color: rgba(45,9,34,0.7);
+    padding-top: 0;
+    padding-bottom: 0.25em;
+}
 .peg {
     background: rgba(45,9,34,0.7);
     max-width: 275px;

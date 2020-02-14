@@ -104,8 +104,10 @@ function resetWinBoard() {
 document.querySelector(".reset").addEventListener("click",setPieces)
 
 
-function setLevel(num) {
-    level = num
+function setLevel(n) {
+    level = n
+    levels.forEach(num => document.querySelector(`.level-${num}`).classList.remove("level-hover"))
+    document.querySelector(`.level-${n}`).classList.add("level-hover")
 }
 
 let levels = [1,2,3,4]
