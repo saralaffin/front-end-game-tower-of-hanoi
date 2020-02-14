@@ -4,7 +4,7 @@ Project 4 in General Assembly SEI35
 
 To see the app, click [here](https://saralaffin.github.io/front-end-game-tower-of-hanoi/)
 
-##Authors
+## Authors
 
 Mainly written by Sara Laffin
 
@@ -14,7 +14,7 @@ How to play using [intro js](https://introjs.com/docs/)
 
 Background image by [Claudio Testa](https://unsplash.com/@claudiotesta?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge)
 
-##Dedication and Inspiration
+## Dedication and Inspiration
 
 Dedicated to my middle school shop teacher, Mr.Kelly. I built this game out of wood in his class.
 
