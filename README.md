@@ -22,8 +22,10 @@ Color scheme inspured by the linux ubuntu terminal.
 
 ## Acknowledgments
 * Instructors and TA's at GA in DC
-* Peers at DC Code and Coffee for helping me understand transitions and animations
 * Google searches
+* [Daniel Eden Copyright (c) 2019](https://daneden.github.io/animate.css/)
+* [intro js](https://introjs.com/docs/)
+* [Claudio Testa](https://unsplash.com/@claudiotesta?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge)
 
 GA requiremenets presented below:
 
